@@ -13,13 +13,74 @@
 var arrayNumeros = new Array();
 //console.log(arrayNumeros);
 
-function obtenerNumeros(){
 
-	arrayNumeros = prompt
+
+function obtenerNumeros(numero, topeDigitos){
+
+topeDigitos = 6;
+
+	for(var i = 1; i <= topeDigitos; i++){
+		numero = prompt("Por favor introduce el digito número "+i);
+		arrayNumeros.push(numero);
+	}
+
+	console.log(arrayNumeros);
+
+}
+
+function mostrarArray(){
+
+	obtenerNumeros();
+
+	document.write("<h3>Numeros seleccionados</h3><br><br>");
+	document.write("<p>Digitos introducidos: "+arrayNumeros+"</p>");
+
+	ordenarNumeros();
+
+}
+
+function ordenarMenoraMayor(a, b){ 
+  return a - b; 
+};
+
+function ordenarMayoraMenor(a, b){ 
+  return a + b; 
+};
+
+function ordenarNumeros(menoramayor, mayoramenor){
+
+	menoramayor = arrayNumeros.sort(ordenarMenoraMayor);
+	console.log(menoramayor);
+	document.write("<p>Numeros ordenados de menor a mayor: "+ menoramayor);
+	mayoramenor = arrayNumeros.sort(ordenarMayoraMenor);
+	console.log(mayoramenor);
+	document.write("<p>Numeros ordenados de mayor a menor: "+ mayoramenor);
+
+}
+
+function contarElementos(elementos){
+
+	elementos = arrayNumeros.length;
+	console.log(elementos);
+	document.write("<p>Cantidad de elementos: "+ elementos);
+
+}
+
+function busquedaPosicion(indice){
+
+	indice = prompt("Dime que posición del array quieres ver: ");
+	document.write("<p>El numero de la posición del array indicado: " + arrayNumeros[indice] + "</p>");
+	
 }
 
 
-/*
-function EjercicioArray(){
 
-}*/
+function EjercicioArray(){
+	mostrarArray();
+	contarElementos();
+	busquedaPosicion();
+
+
+}
+
+EjercicioArray();
