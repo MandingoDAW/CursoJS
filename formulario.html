@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio DOM, Eventos y funciones</title>
+	<script type="text/javascript" src="js/Ejercicios-DOM-Eventos-Funciones.js"></script>
+</head>
+<body>
+	<!--
+		1.Formulario campos: Nombre , Apellidos y edad
+		2.Boton enviar formulario: eventos submit
+		3.Mostrar datos por pantalla
+		4.Tener un boton que al darle click nos muestra los datos actuales del formulario
+	-->
+	<h1>Ejercicio DOM, Eventos y funciones - Curso JS</h1>
+
+	<form id="formulario" action="#" method="POST" onsubmit="return false;">
+		<label for="nombre">Nombre:</label>
+		<input type="text" name="nombre" id="nombre" /><br><br>
+
+		<label for="apellidos">Apellidos:</label>
+		<input type="text" name="apellidos" id="apellidos" /><br><br>
+
+		<label for="edad">Edad:</label>
+		<input type="number" name="edad" id="edad" /><br><br>
+
+
+		<input type="submit" value="Enviar" id="submit">
+	</form>
+</body>
+</html>
